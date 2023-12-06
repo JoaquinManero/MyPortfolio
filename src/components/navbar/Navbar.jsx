@@ -15,7 +15,7 @@ const Navbar = () => {
         >
           Lama Dev
         </motion.span>
-        <div className="social">
+        {/* <div className="social">
           <a href="#">
             <img src="/facebook.png" alt="" />
           </a>
@@ -28,7 +28,7 @@ const Navbar = () => {
           <a href="#">
             <img src="/dribbble.png" alt="" />
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

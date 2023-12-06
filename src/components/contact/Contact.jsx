@@ -53,6 +53,21 @@ const Contact = () => {
     formRef.current.reset();
   };
 
+  const handleDownload = () => {
+    const fileId = "1Za3gRK4c1qqpn-DbUpAoo-W7Mqbn66Mk";
+    const pdfUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+
+    const link = document.createElement("a");
+
+    link.href = pdfUrl;
+    link.download = "nombre_del_archivo.pdf";
+
+    document.body.appendChild(link);
+    link.click();
+
+    document.body.removeChild(link);
+  };
+
   return (
     <motion.div
       ref={ref}
@@ -75,6 +90,18 @@ const Contact = () => {
           <h2>Phone</h2>
           <span>+54 9 351 564 2252</span>
         </motion.div>
+        <button
+          onClick={handleDownload}
+          style={{
+            padding: "10px",
+            width: "250px",
+            fontSize: "16px",
+            backgroundColor: "orange",
+            color: "white",
+          }}
+        >
+          Curriculum Vitae - Spanish
+        </button>
       </motion.div>
       <div className="formContainer">
         <motion.div
